@@ -1,0 +1,11 @@
+# Keep structure but ignore generated content
+context.xml
+guidance.md
+report.md
+call_count
+state.json
+*.log
+
+# Keep these
+!.gitignore
+!history/.gitkeep

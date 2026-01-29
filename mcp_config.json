@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "perplexity": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-perplexity"],
+      "env": {
+        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}",
+        "PERPLEXITY_MODEL": "sonar-reasoning-pro"
+      }
+    },
+    "cairo-coder": {
+      "command": "npx",
+      "args": ["-y", "cairo-coder-mcp"],
+      "description": "Cairo/Starknet code patterns and syntax"
+    },
+    "openzeppelin": {
+      "command": "npx",
+      "args": ["-y", "openzeppelin-cairo-mcp"],
+      "description": "OpenZeppelin Cairo contract patterns"
+    },
+    "agent-reachout": {
+      "command": "npx",
+      "args": ["-y", "agent-reachout-mcp"],
+      "env": {
+        "TELEGRAM_BOT_TOKEN": "${TELEGRAM_BOT_TOKEN}",
+        "TELEGRAM_CHAT_ID": "${TELEGRAM_CHAT_ID}"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Logs
+logs/*.log
+*.log
+logs/**
+
+# Cache
+.cache/
+.ollama/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cairo build artifacts
+project/target/
+project/.scarb/
+
+# Temporary files
+*.tmp
+*.swp
+context*.xml
+context-*-*.xml
+repomix.config.json.bak
+repomix.config.json.tmp
+context/
+
+# Manager protocol artifacts
+.manager/*
+!.manager/.gitignore
+!.manager/history/.gitkeep

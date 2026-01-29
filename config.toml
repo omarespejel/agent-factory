@@ -1,0 +1,31 @@
+[core]
+workspace_base = "/workspace/starknet-monero-agent/project"
+cache_dir = "/workspace/starknet-monero-agent/.cache"
+run_as_openhands = true
+
+[llm]
+# Primary model for coding
+model = "ollama/glm-4.7-flash"
+base_url = "http://localhost:11434"
+api_key = "ollama"
+temperature = 0.1
+max_tokens = 4096
+
+[llm.architect]
+model = "ollama/qwen2.5-coder:32b"
+
+[llm.coder]
+model = "ollama/glm-4.7-flash"
+
+[llm.reviewer]
+model = "ollama/qwen2.5-coder:32b"
+
+[sandbox]
+timeout = 86400  # 24 hours
+use_host_network = true
+enable_auto_lint = true
+
+[agent]
+memory_enabled = true
+memory_max_threads = 5
+enable_history_compression = true

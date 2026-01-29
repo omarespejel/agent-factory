@@ -1,12 +1,12 @@
-# 🤖 Starknet Monero Light Client - Autonomous AI Build
+# Agent Factory - Reproducible Multi-Agent Software Build
 
-> An experiment: Can AI agents autonomously build a production-grade Starknet Monero light client?
+> An experiment: can a coordinated agent stack build production-grade software with manager-guided cycles?
 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 ![Models](https://img.shields.io/badge/Models-GLM--4.7--Flash%20%2B%20Qwen2.5-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 🎯 The Experiment
+## The Experiment
 
 **Rules:**
 - Zero human-written code in `project/`
@@ -17,7 +17,7 @@
 
 **Goal:** Trustless Monero verification on Starknet.
 
-## 📌 Repo Scope
+## Repo Scope
 
 This repository is a **documentation-first logbook** of a remote, autonomous build. It includes setup, architecture, prompts, and a minimal Cairo scaffold. Execution happens on a RunPod GPU, and runtime artifacts are not committed.
 
@@ -26,7 +26,7 @@ This repository is a **documentation-first logbook** of a remote, autonomous bui
 - Model weights or large artifacts
 - Raw runtime logs
 
-## 🧭 Manager Protocol
+## Manager Protocol
 
 The repo includes a lightweight manager loop that periodically summarizes progress and provides guidance.
 
@@ -43,7 +43,7 @@ make manager-tick      # Increment call count after actions
 make research Q="..."  # Perplexity research
 ```
 
-## 🧩 Local vs RunPod Split
+## Local vs RunPod Split
 
 **Local machine (no GPU):**
 - Edit code, review, git operations
@@ -60,7 +60,7 @@ make research Q="..."  # Perplexity research
 **Why split:** Manager/research calls are API-based and do not need GPU time.
 Keep those local to avoid idle GPU costs.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -88,7 +88,7 @@ Keep those local to avoid idle GPU costs.
 └──────────────────────────────────────────────────────────────┘
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Tool | Purpose |
 |-----------|------|---------|
@@ -101,22 +101,22 @@ Keep those local to avoid idle GPU costs.
 | **Infrastructure** | RunPod L40S 48GB | $0.87/hr |
 | **Notifications** | Telegram | Human approval for critical decisions |
 
-## 📊 Progress
+## Progress
 
 | Phase | Status | Started | Completed |
 |-------|--------|---------|-----------|
-| 1. Environment Setup | ✅ Done | Jan 28, 2026 | Jan 28, 2026 |
-| 2. Attestation Foundation | 🟡 Active | - | - |
-| 3. Relayer Registry | ⚪ Pending | - | - |
-| 4. Key Image Tracking | ⚪ Pending | - | - |
-| 5. Event Validator | ⚪ Pending | - | - |
-| 6. Testing & Audit | ⚪ Pending | - | - |
+| 1. Environment Setup | Done | Jan 28, 2026 | Jan 28, 2026 |
+| 2. Attestation Foundation | Active | - | - |
+| 3. Relayer Registry | Pending | - | - |
+| 4. Key Image Tracking | Pending | - | - |
+| 5. Event Validator | Pending | - | - |
+| 6. Testing & Audit | Pending | - | - |
 
-## 🔴 Live Updates
+## Live Updates
 
-Follow the build on X: [@oaborunda](https://x.com/oaborunda)
+Follow the build on X: [@omarespejel](https://x.com/omarespejel)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 starknet-monero-agent/
@@ -164,7 +164,7 @@ starknet-monero-agent/
         └── utils.cairo
 ```
 
-## 🔒 Security Approach
+## Security Approach
 
 | Layer | Protection |
 |-------|------------|
@@ -175,7 +175,7 @@ starknet-monero-agent/
 | **Reviewer** | Qwen2.5 enforces library usage |
 | **Human** | Telegram approval for critical code |
 
-## ✅ Validation Gates
+## Validation Gates
 
 ```bash
 make validate
@@ -183,7 +183,7 @@ make validate
 
 This runs the pre-commit checks in `scripts/validate.sh`, including forbidden pattern scans and build/test gates.
 
-## 🚀 Reproduce This Experiment
+## Reproduce This Experiment
 
 ### Prerequisites
 - RunPod account with GPU credits
@@ -218,32 +218,32 @@ bash scripts/launch.sh
 ### Manual Setup
 See `docs/architecture.md` for detailed setup instructions.
 
-## 💰 Budget
+## Budget
 
 | Item | Cost | Notes |
 |------|------|-------|
 | RunPod L40S 48GB | $0.87/hr | ~115 hrs on $100 |
 | Perplexity API | ~$5 | Light usage |
 
-## 📈 Why This Matters
+## Why This Matters
 
 1. **Trustless Bridges**: Verify Monero transactions on Starknet without trusted intermediaries
 2. **Privacy + Scalability**: Combine Monero's privacy with Starknet's ZK rollup efficiency
 3. **AI-Assisted Security**: Dual auditors catch vulnerabilities humans might miss
 4. **Reproducible Process**: Fully documented for others to learn and build
 
-## 🤝 Contributing
+## Contributing
 
 This is an autonomous AI experiment, but we welcome:
 - Security reviews of generated code
 - Suggestions for improved agent prompts
 - Documentation improvements
 
-## 📜 License
+## License
 
 MIT License - Built by AI, verified by humans.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This is an experimental project. The generated code should undergo professional security audits before any production use with real funds.
 
