@@ -15,7 +15,8 @@
 - OpenZeppelin patterns only
 - 6+ hours of autonomous work
 
-**Goal:** Trustless Monero verification on Starknet.
+**Goal:** A reproducible, auditable multi-agent software factory. The Monero
+case study is included as a realistic workload, not the primary focus.
 
 ## Repo Scope
 
@@ -119,7 +120,7 @@ Follow the build on X: [@omarespejel](https://x.com/omarespejel)
 ## Project Structure
 
 ```
-starknet-monero-agent/
+agent-factory/
 ├── AGENTS.md                # AI agent instructions
 ├── PLAN.md                  # Current agent state
 ├── README.md                # This file
@@ -196,8 +197,8 @@ This runs the pre-commit checks in `scripts/validate.sh`, including forbidden pa
 # 1. Create RunPod GPU Pod (L40S 48GB, 50GB volume at /workspace)
 
 # 2. Clone and setup
-git clone https://github.com/LibreXMR/starknet-monero-agent.git
-cd starknet-monero-agent
+git clone https://github.com/omarespejel/agent-factory.git
+cd agent-factory
 bash scripts/setup-runpod.sh
 
 # 3. Configure
@@ -227,10 +228,10 @@ See `docs/architecture.md` for detailed setup instructions.
 
 ## Why This Matters
 
-1. **Trustless Bridges**: Verify Monero transactions on Starknet without trusted intermediaries
-2. **Privacy + Scalability**: Combine Monero's privacy with Starknet's ZK rollup efficiency
-3. **AI-Assisted Security**: Dual auditors catch vulnerabilities humans might miss
-4. **Reproducible Process**: Fully documented for others to learn and build
+1. **Agent Orchestration**: A concrete, reproducible pattern for coordinating AI agents
+2. **Auditability**: Manager guidance, reports, and validation gates for traceability
+3. **Separation of Concerns**: Local manager loop + GPU execution split to save costs
+4. **Reproducible Process**: Fully documented workflow others can adopt
 
 ## Contributing
 
@@ -247,4 +248,3 @@ MIT License - Built by AI, verified by humans.
 
 This is an experimental project. The generated code should undergo professional security audits before any production use with real funds.
 
-# agent-factory
